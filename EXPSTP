@@ -1,0 +1,32 @@
+@Sadiya
+
+#include <bits/stdc++.h>
+using namespace std;
+void ac(){
+    int n,i,x1,x2,y1,y2;
+    cin>>n>>x1>>y1>>x2>>y2;
+    int a,b,c,d,m,s,p,q;
+    a = x1;
+    b = n-x1+1;
+    c = y1;
+    d = n-y1+1;
+    p = min(min(a,b), min(c,d));
+    
+    a = x2;
+    b = n-x2+1;
+    c = y2;
+    d = n-y2+1;
+    q = min(min(a,b), min(c,d));
+    m = p+q;
+    
+    s = abs(x2-x1)+abs(y2-y1);
+    cout<<min(m,s)<<endl;
+}
+int main() {
+	// your code goes here
+	int tc; cin>>tc;
+	while(tc--){
+	    ac();
+	}
+	return 0;
+}
